@@ -1,0 +1,17 @@
+name: "R and RStudio"
+navbar:
+  title: "R and Rstudio"
+  left:
+    - text: "Learning R"
+      href: index.html
+    - text: "Get started"
+      href: Get_started.html
+    - text: "R Projects"
+      href: Setting_up_a_project.html
+output:
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    number_sections: true
+    css: styles.css
