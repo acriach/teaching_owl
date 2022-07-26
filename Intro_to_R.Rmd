@@ -20,7 +20,7 @@ knitr::opts_chunk$set(echo = TRUE)
 # This is R
 
 ```{r, echo=FALSE, fig.alt="A digital cartoon with two illustrations: the top shows the R-logo with a scary face, and a small scared little fuzzy monster holding up a white flag in surrender while under a dark stormcloud. The text above says “at first I was like…” The lower cartoon is a friendly, smiling R-logo jumping up to give a happy fuzzy monster a high-five under a smiling sun and next to colorful flowers. The text above the bottom illustration reads “but now it’s like…”"}
-knitr::include_graphics("C:/teaching_owl/images/at_first_it_was_like.jfif")
+knitr::include_graphics("./images/r_first_then.png")
 ```
 Artwork by @allison_horst
 
@@ -42,13 +42,13 @@ When you first open RStudio, you will see three panels:
   * Files/Plots/Packages/Help/Viewer (tabbed in lower right)
 
 ```{r, echo=FALSE, fig.alt="A screenshot of Rstudio showing eleven menus at the top left. One panel covers the left half with text about the R software. The right is divided into two panels with text saying that the environment is empty in the top panel and a display of the current file directory in the bottom panel."}
-knitr::include_graphics("C:/teaching_owl/RStudio_screenshot.png")
+knitr::include_graphics("./images/RStudio_screenshot.png")
 ```
 
-Once you open files, such as R scripts, another panel will open in the top left.
+Once you open files, such as R scripts (click on the white square with the arrow in green icon), another panel will open in the top left.
 
 ```{r,echo=FALSE, fig.alt="Two zoomed in screenshots of the top left menus in RStudio. The first screenshot shows a black rectangle highlighting an icon which is a white square with a plus inside a green circle. The second screenshot shows a black rectangle highlighting a menu item that reads R Script followed by the associated keyboard shortcut, Ctrl + Shift + N."}
-knitr::include_graphics("C:/teaching_owl/images/RStudio_screenshot_script.png")
+knitr::include_graphics("./images/RStudio_screenshot_script.png")
 
 ```
 
@@ -195,7 +195,7 @@ different conventions for long variable names, these include
 What you use is up to you, but **be consistent**.
 
 ```{r, echo=FALSE, fig.alt="A wound up snake with mouth open is beside the screaming_snake_case. A spread out snake has snake_case written on it. A camel with headphones on has camelCase written on it with the captial C in the space of it's hump. Colourful letters on a line spell out kebab-case"}
-knitr::include_graphics("C:/teaching_owl/images/coding_cases.png")
+knitr::include_graphics("./images/coding_cases.png")
 ```
 Artwork by @allison_horst
 
