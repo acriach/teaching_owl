@@ -1,0 +1,72 @@
+---
+title: "R Projects"
+author:
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    number_sections: true
+    css: styles.css
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r, echo=FALSE, fig.alt="A cartoon of a cracked glass cube looking frustrated with casts on its arm and leg, with bandaids on it, containing “setwd”, looks on at a metal riveted cube labeled “R Proj” holding a skateboard looking sympathetic, and a smaller cube with a helmet on labeled “here” doing a trick on a skateboard."}
+knitr::include_graphics("./images/cracked_setwd.png")
+```
+Artwork by @allison_horst
+
+<br>
+
+# Creating a new Project in R
+
+
+> **Challenge 1**
+>
+> 1. Click the "File" menu button, then "New Project".
+> 2. Click "New Directory".
+> 3. Click "New Project".
+> 4. Type in the name of the directory to store your project, e.g. "my_project".
+> 5. Click the "Create Project" button
+
+The simplest way to open an RStudio project once it has been created is to click
+through your file system to get to the directory where it was saved and double
+click on the `.Rproj` file. This will open RStudio and start your R session in the
+same directory as the `.Rproj` file. All your data, plots and scripts will now be
+relative to the project directory. RStudio projects have the added benefit of
+allowing you to open multiple projects at the same time each open to its own
+project directory. This allows you to keep multiple projects open without them
+interfering with each other.
+
+
+## Best practices for project organization
+
+In the bottom left pane in RStudio, click the "Files" tab. To organise your project you could create folders called `data`, `scripts`, `results`, `docs` by clicking the folder icon with the green plus sign.
+
+### Separate function definition and application
+
+One of the more effective ways to work with R is to start by writing the code you want to run directly in an .R script, and then running the selected lines (either using the keyboard shortcuts in RStudio or clicking the "Run" button) in the interactive R console.
+
+Open a script (click the white square with the cross in green below File). Save the script in your R project folder (click "File", then "Save as" and browse to the `script` folder in your project)
+
+### Save the data in the data folder
+
+```{r, echo=FALSE, fig.alt="Three cartoon penguines with chinstrap, gentoo and adelie written above them."}
+knitr::include_graphics("./images/lter_penguins.png")
+```
+
+> **Challenge 2**
+> Download the palmer penguins data from [here](https://raw.githubusercontent.com/swcarpentry/r-novice-gapminder/gh-pages/_episodes_rmd/data/gapminder_data.csv).
+>
+> 1. Download the file (CTRL + S, right mouse click -> "Save as", or File -> "Save page as")
+> 2. Make sure it's saved under the name `penguins_data.csv`
+> 3. Save the file in the `data` folder within your project.
+>
+> We will load and inspect these data later.
+
