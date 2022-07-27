@@ -1,0 +1,55 @@
+---
+title: "Seeking_Help"
+author: "Anna"
+date: '2022-07-25'
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Reading Help files
+
+R, and every package, provide help files for functions. This will load up a help page in RStudio:
+
+```{r, eval=FALSE}
+?function_name
+help(function_name)
+```
+
+Each help page is broken down into sections (Description, Usage, Arguments etc). The last section Examples is very useful.
+The command below will bring up the help for the function `log`.
+
+```{r, eval=FALSE}
+?log
+```
+
+> ## Tip: Reading help files
+>
+> One of the most daunting aspects of R is the large number of functions
+> available. It would be prohibitive, if not impossible to remember the
+> correct usage for every function you use. Luckily, the help files
+> mean you don't have to!
+{: .callout}
+## Special Operators
+
+To seek help on special operators, use quotes:
+
+```{r, eval=FALSE}
+?"<-"
+```
+
+
+## When your code doesn't work: seeking help from your peers
+
+If you're having trouble using a function, 9 times out of 10,
+the answers you are seeking have already been answered on
+[Stack Overflow](http://stackoverflow.com/). 
+
+
+## Other Resources
+
+* [Quick R](http://www.statmethods.net/)
+* [RStudio cheat sheets](http://www.rstudio.com/resources/cheatsheets/)
+* [Cookbook for R](http://www.cookbook-r.com/)

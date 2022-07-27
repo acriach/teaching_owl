@@ -1,0 +1,149 @@
+---
+title: "Test"
+author: "Anna Riach"
+output: 
+  html_document:
+    toc: true
+    toc_depth: 2
+    toc_float: true
+    number_sections: true
+    css: styles.css
+editor_options: 
+  markdown: 
+    wrap: 72
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{r import penguin data for developer, include = FALSE}
+penguins <- readr::read_csv("C:/teaching_owl/data/penguins.csv")
+```
+
+## You Need Both R and RStudio Installed
+
+If you only downloaded RStudio onto your laptop it will not work. RStudio needs R to make it work.
+
+Computers in the clusters have both software. You can try to download them onto your own laptop after this class.
+
+* [Download and install the latest version of R here](https://www.r-project.org/)
+* [Download and install RStudio here](https://www.rstudio.com/)
+
+## Introduction to RStudio
+
+**Basic layout**
+
+When you first open RStudio, you will be greeted by three panels:
+
+  * The interactive R console (entire left)
+  * Environment/History (tabbed in upper right)
+  * Files/Plots/Packages/Help/Viewer (tabbed in lower right)
+
+```{r, echo=FALSE, fig.cap="*When RStudio is first started, three panels are visible*.", fig.alt="A screenshot of Rstudio showing eleven menus at the top left. One panel covers the left half with text about the R software. The right is divided into two panels with text saying that the environment is empty in the top panel and a display of the current file directory in the bottom panel."}
+knitr::include_graphics("C:/teaching_owl/RStudio_screenshot.png")
+```
+
+Once you open files, such as R scripts, another panel will open in the top left.
+
+```{r,echo=FALSE, fig.cap='*Open a script by pressing the "New File" button, followed by "R Script"*.', fig.alt="Two zoomed in screenshots of the top left menus in RStudio. The first screenshot shows a black rectangle highlighting an icon which is a white square with a plus inside a green circle. The second screenshot shows a black rectangle highlighting a menu item that reads R Script followed by the associated keyboard shortcut, Ctrl + Shift + N."}
+knitr::include_graphics("C:/teaching_owl/images/RStudio_screenshot_script.png")
+
+```
+
+
+## Working in RStudio
+There are two main ways one can work within RStudio.
+
+1. Test and play within the interactive R console (bottom left) 
+2. Start writing in an .R file (script) and use RStudio's short cut keys to run the commands in the R console.
+   * This is a great way to start; all your code is saved for later
+   * You will be able to run the .R file (script) you create from within RStudio.
+   
+:::: {.mediumorchidbox data-latex=""}
+::: {.center data-latex=""}
+**Tip: Running segments of your code**
+:::
+
+RStudio offers you great flexibility in running code from within the editor window. There are buttons, menu choices, and keyboard shortcuts.To run the current line, you can
+1. click on the `Run` button above the editor panel, or  
+2. select "Run Lines" from the "Code" menu, or  
+3. hit <kbd>Ctrl</kbd>+<kbd>Return</kbd> in Windows or Linux or <kbd>&#8984;</kbd>+<kbd>Return</kbd> on OS X.
+(This shortcut can also be seen by hovering the mouse over the button). To run a block of code, select it and then `Run`.
+::::
+
+The simplest thing you could do with R is do arithmetic:
+
+```{r}
+1 + 100
+```
+
+And R will print out the answer, with a preceding "[1]". Don't worry about this. For now think of it as indicating what line the output is on.
+
+If you type in an incomplete command, R will wait for you to
+complete it:
+
+~~~
+> 1 +
+~~~
+
+
+~~~
++
+~~~
+
+
+Any time you run a command and the R session shows a "+" instead of a ">", it
+means it's waiting for you to complete the command. If you want to cancel
+a command you can hit "Esc" and RStudio will give you back the ">" prompt.
+
+## R Packages
+
+It is possible to add functions to R by writing a package, or by
+obtaining a package written by someone else. As of this writing, there
+are over 18,000 packages available on CRAN (the comprehensive R archive
+network). R and RStudio have functions for managing packages:
+
+* You can see what packages are installed by typing
+  `installed.packages()`
+* You can install packages by typing `install.packages("packagename")`,
+  where `packagename` is the package name, in quotes.
+* You can load a package and make it available for use with `library(packagename)`
+
+> **Challenge 1**
+>
+> Which of the following are valid R variable names?
+> ```{r, eval=FALSE}
+> min_height
+> max.height
+> _age
+> MaxLength
+> min-length
+> 2widths
+> celsius2kelvin
+> ```
+
+<details>
+  <summary>**Solution to Challenge 1**</summary>
+
+The following can be used as R variables:
+```{r ch1pt1-sol, eval=FALSE}
+min_height
+max.height
+MaxLength
+celsius2kelvin
+```
+
+The following will not be able to be used to create a variable
+```{r ch1pt3-sol, eval=FALSE}
+_age
+min-length
+2widths
+```
+
+</details>
+
+```{r, echo=FALSE, fig.alt="A cartoon of a cracked glass cube looking frustrated with casts on its arm and leg, with bandaids on it, containing “setwd”, looks on at a metal riveted cube labeled “R Proj” holding a skateboard looking sympathetic, and a smaller cube with a helmet on labeled “here” doing a trick on a skateboard."}
+knitr::include_graphics("C:/teaching_owl/images/workflows_that_shred.jfif")
+```
+Artwork by @allison_horst

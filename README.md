@@ -1,2 +1,2 @@
-# teaching_owl
-Materials for teaching R and RStudio
+# Teaching Materials
+Created for teaching R and RStudio under creative commons license.
